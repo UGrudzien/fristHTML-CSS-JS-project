@@ -24,6 +24,7 @@
 
 
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="datepicker/js/bootstrap-datepicker.js"></script>
     <script src="datepicker/js/bootstrap-datepicker.min.js"></script>
 
@@ -129,11 +130,11 @@
 
                                 <div class="col-md-6">
 
-                                    <select class="form-control " id="timeSelect" name="selectTime" >
-                                        <option id="selectOption"  > -- select an option -- </option>
-                                       <option id="fullTime " value="8 " name="selectOptionTIme" onclick="chooseTimeWrittenBlock()"> Full Time (8 hour) </option>
-                                       <option id="partTime " value="4 " name="selectOptionTIme" onclick="chooseTimeWrittenBlock()"> Part Time (4 hour) </option>
-                                       <option id="quoterTime " value="2 "  name="selectOptionTIme" onclick="chooseTimeWrittenBlock()"> Quoter Time (2 hour) </option>
+                                    <select class="form-control " id="timeSelect" name="selectTime">
+                                        <option id="selectOption" value="none" > -- select an option -- </option>
+                                       <option id="fullTime " value="8" name="selectOptionTime" > Full Time (8 hour) </option>
+                                       <option id="partTime " value="4" name="selectOptionTime" > Part Time (4 hour) </option>
+                                       <option id="quoterTime " value="2"  name="selectOptionTime" > Quoter Time (2 hour) </option>
                                        
                                    </select>
                                 </div>
@@ -153,8 +154,8 @@
                             <div class="row" id="internal">
 
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control " data-min="0" data-max="12" id="workerWrittenTime" placeholder=" Write your time e.g = 5"
-                                        onclick="writtenTimeSelectBlock()" name="selectTime" />
+                                    <input type="number" class="form-control " data-min="0" data-max="12" id="workerWrittenTime" placeholder=" Write your time e.g = 5"
+                                        name="selectTime" />
                                 </div>
 
                             </div>
@@ -164,8 +165,9 @@
 
                         <div class="row justify-content-center ">
                             <div class="col-md-2">
-                                <button class="btn btn-primary " type="submit " value="Submit">Submit</button>
+                                <button class="btn btn-primary " type="submit" onclick="alertMessage()" value="Submit" name="submit">Submit</button>
                             </div>
+                   
                         </div>
                     </div>
 
@@ -173,17 +175,18 @@
 
             </div>
         </div>
-        
-            
+    </div>
 
 
 
 
-            <!-- Latest compiled and minified JavaScript -->
-            <script type="text/javascript " src="js/script.js "> </script>
-            <script src="http://code.jquery.com/jquery-2.1.1.min.js "></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa "
-                crossorigin="anonymous "></script>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript " src="js/script.js "> </script>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa "
+        crossorigin="anonymous "></script>
 </body>
 
 </html>
